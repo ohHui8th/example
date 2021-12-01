@@ -1,0 +1,16 @@
+server:
+  #定义端口号
+  port: 9092
+spring:
+  application:
+    #定义应用名称，即服务名称
+    name: consumer-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+  #服务注册中心实例的主机名
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: 127.0.0.1:9092
