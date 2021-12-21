@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 public class SayHaloImpl implements SayHalo {
     @Override
     public String sayHalo() {
-        return "why you bully me?";
+        return "why you bully me? 黑鸡黑";
     }
 }
