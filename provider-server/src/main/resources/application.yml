@@ -4,12 +4,30 @@ spring:
   application:
     name: provider-server
   datasource:
-    driver-class-name: org.h2.Driver
-    schema: classpath:db/schema-h2.sql
-    data: classpath:db/data-h2.sql
-    url: jdbc:h2:mem:test
-    username: root
-    password: test
+    username: gtwg
+    password: Gwhl@testdb2020
+    url: jdbc:mariadb://192.168.204.20:30582/gtwg?useUnicode=true&&characterEncoding=utf-8&&useSSL=false&&autoReconnect=true
+    driver-class-name: org.mariadb.jdbc.Driver
+#  mvc:
+#    static-path-pattern: /static/**
+#    view:
+#      prefix: /templates/
+#      suffix: .html
+#  thymeleaf:
+#    #缓冲的配置
+#    cache: false
+#    check-template: true
+#    check-template-location: true
+#    #开启MVC thymeleaf 视图解析
+#    enabled: true
+#    encoding: utf-8
+#    mode: HTML
+#    prefix: classpath:/templates/
+#    suffix: .html
+#  web:
+#    resources:
+#      static-locations: classpath:/static/
+
 
 
 eureka:

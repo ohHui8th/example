@@ -23,6 +23,20 @@ public class WeChatAPI {
     }
 
     /**
+     * 获取自建应用token
+     * @return
+     */
+    public String getGroupAccessToken(){
+        Map resultMap = new HashMap();
+        String corpId = "wwaf4fa29cf5869625";
+        String corpSecret = "zz2TE0tyIond7I-Q0cp_gzKeLGeJ0dpxgY7erGPjDIc";
+        String url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid="+corpId+"&corpsecret="+corpSecret;
+        resultMap.put("url",url);
+        String content = HttpsClient.doGet(resultMap);
+        return content;
+    }
+
+    /**
      *
      * @param status    审批状态
      * @param applyer   申请人
